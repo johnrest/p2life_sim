@@ -1,12 +1,20 @@
 // p2life_sim.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
-#include <iostream>
+#include "Board.h"
 
 int main()
 {
-    std::cout << "Hello World!\n"; 
-	std::cout << "new Hello World!\n";
+	Board game;
+	
+	game.print();
+	for (int i=0; i<10; i++){
+		game.update();
+		game.print();
+	}
+	
+	//std::cout << (abs(4-1) == 3) << std::endl;
+	std::cin.get();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
